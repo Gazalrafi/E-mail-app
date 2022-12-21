@@ -15,14 +15,19 @@ import FindInPageIcon from '@material-ui/icons/FindInPage';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import VideocamIcon from '@material-ui/icons/Videocam';
 import keyboardIcon from '@material-ui/icons/Keyboard';
+import {useDispatch} from 'react-redux';
+import { openSendMessage } from './features/mailSlice';
 
 
 
 
 function SideBar() {
+
+  const dispatch =useDispatch();
+
   return (
     <div className='sidebar'>
-     <Button startIcon={<AddIcon/>} className="compose__btn">Compose</Button>
+     <Button startIcon={<AddIcon/>} className="compose__btn" onClick={()=>dispatch(openSendMessage())}>Compose</Button>
 
      <SidebarOptions Icon={InboxIcon} title="Inbox" number='227' isActive={true}/>
 

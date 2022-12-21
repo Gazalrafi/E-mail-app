@@ -1,0 +1,7 @@
+.emaillist{
+    display:flex;
+    flex-direction: column;
+}
+.jodit-status-bar{
+    visibility: hidden;
+}
